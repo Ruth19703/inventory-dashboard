@@ -1,0 +1,445 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShoeStock | Inventory Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>ShoeStock</span>
+            </div>
+
+            <nav class="menu">
+                <a href="#" class="active">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#products">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Products</span>
+                </a>
+
+                <a href="#stock">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Stock</span>
+                </a>
+
+                <a href="#orders">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Orders</span>
+                </a>
+
+                <a href="#customers">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Customers</span>
+                </a>
+
+                <a href="#settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-note">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Inventory Tip</h3>
+                <p>Keep track of your stock levels to avoid running out of popular shoe styles.</p>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search shoes, categories...">
+                </div>
+
+                <div class="user">
+                    <button class="notification" type="button" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="avatar">R</div>
+
+                    <div class="user-info">
+                        <h4>Ruth</h4>
+                        <p>Administrator</p>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD HEADING -->
+            <section class="heading">
+                <div>
+                    <p class="eyebrow">SHOESTOCK MANAGEMENT</p>
+                    <h1>Inventory Dashboard</h1>
+                    <p class="heading-description">
+                        Manage your shoe inventory and monitor stock levels in one place.
+                    </p>
+                </div>
+
+                <div class="date-label">
+                    <i class="fa-regular fa-calendar"></i>
+                    Inventory Overview
+                </div>
+            </section>
+
+
+            <!-- SUMMARY CARDS -->
+            <section class="summary">
+
+                <div class="summary-card">
+                    <div class="summary-icon blue">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+
+                    <div>
+                        <p>Total Pairs in Stock</p>
+                        <h2>510</h2>
+                        <span class="summary-note">
+                            <i class="fa-solid fa-box"></i>
+                            Across 6 categories
+                        </span>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon red">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                    </div>
+
+                    <div>
+                        <p>Pairs Remaining</p>
+                        <h2>416</h2>
+                        <span class="summary-note">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Available inventory
+                        </span>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- SHOE CATEGORIES -->
+            <section class="products" id="products">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Shoe Categories</h2>
+                        <p>Check the stock levels for each shoe category.</p>
+                    </div>
+
+                    <span class="category-count">6 Categories</span>
+                </div>
+
+
+                <div class="shoe-grid" id="stock">
+
+                    <!-- 1. SPORTS SHOES -->
+                    <article class="shoe-card">
+
+                        <div class="shoe-heading">
+                            <div class="shoe-icon blue">
+                                <i class="fa-solid fa-person-running"></i>
+                            </div>
+
+                            <div>
+                                <h3>Sports Shoes</h3>
+                                <p>For active lifestyles</p>
+                            </div>
+                        </div>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+                            alt="Red sports sneaker"
+                            class="shoe-image"
+                        >
+
+                        <div class="stock-details">
+                            <div>
+                                <span>Total Stock</span>
+                                <h2>120</h2>
+                            </div>
+
+                            <div>
+                                <span>Remaining</span>
+                                <h2>98</h2>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <span>Stock Level</span>
+                            <div class="progress">
+                                <div class="progress-bar green-bar" style="width: 82%;"></div>
+                            </div>
+                            <strong>82%</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 2. CASUAL SHOES -->
+                    <article class="shoe-card">
+
+                        <div class="shoe-heading">
+                            <div class="shoe-icon orange">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                            </div>
+
+                            <div>
+                                <h3>Casual Shoes</h3>
+                                <p>Everyday comfort</p>
+                            </div>
+                        </div>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80"
+                            alt="Casual canvas shoes"
+                            class="shoe-image"
+                        >
+
+                        <div class="stock-details">
+                            <div>
+                                <span>Total Stock</span>
+                                <h2>100</h2>
+                            </div>
+
+                            <div>
+                                <span>Remaining</span>
+                                <h2>80</h2>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <span>Stock Level</span>
+                            <div class="progress">
+                                <div class="progress-bar blue-bar" style="width: 80%;"></div>
+                            </div>
+                            <strong>80%</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 3. BOOTS -->
+                    <article class="shoe-card">
+
+                        <div class="shoe-heading">
+                            <div class="shoe-icon purple">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                            </div>
+
+                            <div>
+                                <h3>Boots</h3>
+                                <p>Durable and stylish</p>
+                            </div>
+                        </div>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=800&q=80"
+                            alt="Leather boots"
+                            class="shoe-image"
+                        >
+
+                        <div class="stock-details">
+                            <div>
+                                <span>Total Stock</span>
+                                <h2>80</h2>
+                            </div>
+
+                            <div>
+                                <span>Remaining</span>
+                                <h2>64</h2>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <span>Stock Level</span>
+                            <div class="progress">
+                                <div class="progress-bar purple-bar" style="width: 80%;"></div>
+                            </div>
+                            <strong>80%</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 4. HEELS -->
+                    <article class="shoe-card">
+
+                        <div class="shoe-heading">
+                            <div class="shoe-icon teal">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                            </div>
+
+                            <div>
+                                <h3>Heels</h3>
+                                <p>Elegant and fashionable</p>
+                            </div>
+                        </div>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80"
+                            alt="Women's high-heeled shoes"
+                            class="shoe-image"
+                        >
+
+                        <div class="stock-details">
+                            <div>
+                                <span>Total Stock</span>
+                                <h2>70</h2>
+                            </div>
+
+                            <div>
+                                <span>Remaining</span>
+                                <h2>52</h2>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <span>Stock Level</span>
+                            <div class="progress">
+                                <div class="progress-bar orange-bar" style="width: 74%;"></div>
+                            </div>
+                            <strong>74%</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 5. SANDALS -->
+                    <article class="shoe-card">
+
+                        <div class="shoe-heading">
+                            <div class="shoe-icon brown">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                            </div>
+
+                            <div>
+                                <h3>Sandals</h3>
+                                <p>Light and comfortable</p>
+                            </div>
+                        </div>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=800&q=80"
+                            alt="Comfortable sandals"
+                            class="shoe-image"
+                        >
+
+                        <div class="stock-details">
+                            <div>
+                                <span>Total Stock</span>
+                                <h2>80</h2>
+                            </div>
+
+                            <div>
+                                <span>Remaining</span>
+                                <h2>74</h2>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <span>Stock Level</span>
+                            <div class="progress">
+                                <div class="progress-bar teal-bar" style="width: 93%;"></div>
+                            </div>
+                            <strong>93%</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 6. FORMAL SHOES -->
+                    <article class="shoe-card">
+
+                        <div class="shoe-heading">
+                            <div class="shoe-icon brown">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                            </div>
+
+                            <div>
+                                <h3>Formal Shoes</h3>
+                                <p>Professional and elegant</p>
+                            </div>
+                        </div>
+
+                        <img
+                            src="/formal1.jpeg"
+                            alt="Formal leather shoes"
+                            class="shoe-image"
+                        >
+
+                        <div class="stock-details">
+                            <div>
+                                <span>Total Stock</span>
+                                <h2>60</h2>
+                            </div>
+
+                            <div>
+                                <span>Remaining</span>
+                                <h2>48</h2>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <span>Stock Level</span>
+                            <div class="progress">
+                                <div class="progress-bar brown-bar" style="width: 80%;"></div>
+                            </div>
+                            <strong>80%</strong>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <p>&copy; 2026 ShoeStock Inventory Management.</p>
+                <p>Organize your stock. Manage your business.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
+```
